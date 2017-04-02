@@ -4,3 +4,19 @@
 
 \chapter{System overvejelser}
 
+I denne opgave vil vi undersøge hvor mange betydende cifre vi kan medbringe, hvis vi tager udgangspunkt i 100. ordens filter, og det skal kunne vises på et display. Støjens spredning skal ligge under 1/10 af værdien.
+Vi starter med at udregne gram per bit.
+
+\begin{lstlisting}[frame=single]  % Start your code-block
+for i:=maxint to 0 do
+bits_per_gram=(avg_unloaded-avg_loaded)/1000;
+grams_per_bit=1/bits_per_gram;
+\end{lstlisting}
+Derefter kan vi udregne nøjagtigheden, for vores filter.
+
+\begin{lstlisting}[frame=single]  % Start your code-block
+for i:=maxint to 0 do
+gram_thresh=dev_unloaded_filtered*grams_per_bit*10;
+=151.3545
+\end{lstlisting}
+Det betyder at vi kan måle med 150 gram præcision, derfor kan vi ikke have flere betydende cifre end heltal. 
