@@ -1,0 +1,12 @@
+DSA Case 4 noter
+
+Det er bedre at bruge et ikke-periodisk signal til sonar, da et periodisk signal vil give mange peaks af næsten samme størrelse omkring det egentlige peak. Er der støj i signalet (og det er der!), kan det være svært at vurdere det egentlige peak.
+Et ikke periodisk signal vil derimod kun have ét enkelt peak.
+
+Et længere signal vil give et mere præcist resultat(?)
+
+Mindst muligt målte afstand = 1/fs*hast_lyd(?)
+
+Størst muligt målte afstand = fs*(rec_len-signal_len)*hast_lyd(?)
+
+hast_lyd=343m/s
