@@ -122,20 +122,12 @@ title('Crosscorrelation - 0.30m');
 xlim([0 280])
 
 %Udregning af afstande
-V_l=343; %Lydens hastighed i luft (m/s)
-mps=ts*V_l/2; %Meter pr. sample.
+mps=7.146/1000; %meter pr. sample
 
-%Delay i samples er aflæst som afstanden imellem bølgetoppe på
-%krydskorrelationen.
+d_samples_0_30m=190-136;
+d_t_0_30m=d_samples_0_30m*ts;
+afstand_0_30m=d_t_0_30m/2*V_k
 
-%0.30m
-d_samples_0_30m=190-136; %Delay i samples
-afstand_0_30m=d_samples_0_30m*mps; %Udregnet afstand (m)
+d_samples_1m=311-136;
 
-%1m
-d_samples_1m=310-136; %Delay i samples
-afstand_1m_2=d_samples_1m*mps; %Udregnet afstand (m)
-
-%2m
-d_samples_2m=650-132; %Delay i samples
-afstand_2m=d_samples_2m*mps; %Udregnet afstand (m)
+d_samples_2m=650-132;
