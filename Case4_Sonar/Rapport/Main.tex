@@ -1,0 +1,43 @@
+\documentclass{report}
+
+\input{Config}
+
+\begin{document}\thispagestyle{empty}
+
+%-----------------------------------------------
+%	PROJECT INFORMATION
+%-----------------------------------------------
+
+\def \institution{Aarhus University}
+\def \subject{Digital System Analyse}
+\def \title {Case 4 - Sonar}
+\def \author{Lasse Lildholdt \\ (201507170) \\ Mathias Lønborg Friis \\ (201505665) \\ Daniel Tøttrup \\ (201509520)}  
+\def \supervisor{Kim Bjerre}
+
+%-----------------------------------------------
+%	PRE-CONTENT
+%-----------------------------------------------
+
+\include{Pre-content/Title-page-std}
+\include{Pre-content/Contents}
+
+%-----------------------------------------------
+%	CHAPTERS
+%-----------------------------------------------
+
+\pagenumbering{arabic}
+\include{Chapters/Indledning/Indledning}
+\include{Chapters/Opgave1/Opgave1}
+\include{Chapters/Opgave2/Opgave2}
+\include{Chapters/Opgave3/Opgave3}
+\include{Chapters/Opgave4/Opgave4}
+\include{Chapters/Konklusion/Konklusion}
+
+
+%-----------------------------------------------
+%	POST-CONTENT
+%-----------------------------------------------
+
+\bibliographystyle{plain}
+
+\end{document}
