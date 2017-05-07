@@ -5,5 +5,8 @@
 \chapter{Indledning}
 
 \section{Baggrund for opgaven}
+I skal bygge et sonar system (SOund NAvigation and Ranging), som kan afstandsbestemme vha. et udsendt akustisk signal. I vil her benytte lyd i det hørbare område - modsat traditionel sonar, som er i ultralydsområdet (og under vand).
+Princippet er, at lyd har en rejsetid fra udsendelse fra højttaler via refleksion på objekt til modtagelse i mikrofon, som vi kan måle og dermed bestemme afstanden, da lyden har ca. konstant hastighed. I luft er hastigheden ca. 340 m/s, men det afhænger i virkeligheden af fx. tryk og temperatur. Vi vil også kun måle på stationære objekter, for ellers kan doppler-effekten begynde at spille ind (som fx. benyttes meget til hastighedsmålinger). Princippet i sonar er magen til princippet i fx. radar og lidar, hvor der blot benyttes elektromagnetiske signaler istf. akustisk.
 
 \section{Formål med opgaven}
+I skal implementere lyd-afspilning og lyd-optagelsessystem på Blackfin kittet med signaler, som I har designet i Matlab. På denne måde kan I få optaget "ekko-signalet" på Blackfin kittet og da I samtidig har det kendte afspillede signal, kan I benytte krydskorrelation (i MATLAB) til at finde afstand til et objekt. Således er der ikke lagt op til at I skal lave et real-tids målesystem - men I er ikke langt fra..

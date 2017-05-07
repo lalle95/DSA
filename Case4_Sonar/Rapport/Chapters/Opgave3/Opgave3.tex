@@ -3,4 +3,11 @@
 %-------------------------------------------------------------------------------
 
 \chapter{Eksperimenter}
+For at teste vores program til lyd afspilning og optagelse lavede vi en test opstilling med vores Blackfin, højtaler og mikrofon. I første omgang plcerede vi højtaler og mikrofon direkte mod hinanden for at teste hvorvidt vores afspilning og optagelse reelt virkede. Dette gav os noget optaget data som vi kunne overfører til matlab og se på i såvel tidsdomænet som med krydskorrelation. Her så vi i krydskorrelationen hvordan denne gav et spike så snart den afspillede lyd blev fanget af mikrofonen. Altså virkede vores kode. 
+
+Herefter placerede vi vores højtaler og mikrofon i samme retning hen mod en mur. I første omgang holdte vi højtaler og mikrofon helt tæt op ad hinandne men med front mod en væg. Igen optog vi noget data hvor vi ønskede at se et spike i krydskorrelationen lige efter afspilning og endnu et spike så snart ekkoet blev opfanget. Ved analyse i matlab var dette dog ikke resultatet. Vi oplevede at når vi så på vores data i tidsdomænet blev vores signal klippet. Grundet herfor er at mikrofonen der blev anvendt er meget følsom. Derfor blev signalet alt for stærkt når højtaler og mikrofon holdtes helt tæt op mod hinanden. 
+
+I første omgang forsøgte vi at løse problemet ved at bitshifte vores signal længere ned efter optagelse men dette var uden hæld. Det var nødvendigt at bitshifte signalet så langt, for at undgå at det klippede, at præcisionen af signalet blev for lille. 
+
+Derfor forsøgte vi istedet at holde højtaler og mikrofon adskilt med stadig med front mod samme væg. Dette resulterede i at mikrofonen ikke længere overstyrede samtidig med vi stadig kunne optage såvel afspilningen som ekkoet. Derfor var dette den opstilling vi endte med at tage vores målinger med. De målinger som senere blev brugt under vores analyse. Se opgave 4. 
 
